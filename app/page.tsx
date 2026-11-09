@@ -350,9 +350,8 @@ export default function Home() {
           <div className="my-6 h-px bg-gray-900"></div>
 
           <p className="text-sm text-gray-600">
-            © {new Date().getFullYear()} France Queenie Boncodin.
-            All Rights Reserved.
-          </p>
+  © 2026 France Queenie Boncodin. All Rights Reserved.
+</p>
 
           <p className="mt-2 text-xs text-red-700">
             Designed with ❤️ and passion for technology.
