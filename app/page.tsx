@@ -1,16 +1,37 @@
+import {
+  ArrowDown,
+  ArrowRight,
+  Code2,
+  GraduationCap,
+  Laptop,
+  Mail,
+  MapPin,
+  Phone,
+  School,
+  Sparkles,
+  User,
+  BookOpen,
+  Heart,
+  Terminal,
+} from "lucide-react"
+
+import { Card, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Separator } from "@/components/ui/separator"
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#080808] text-white scroll-smooth">
+    <main className="min-h-screen w-full overflow-x-hidden bg-[#080808] text-white">
 
       {/* NAVIGATION */}
-      <nav className="fixed top-0 z-50 w-full border-b border-red-900/30 bg-black/90 backdrop-blur-md">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+      <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-[#080808]/90 backdrop-blur-xl">
+        <div className="mx-auto flex w-full items-center justify-between px-6 py-4">
 
-          <h1 className="text-2xl font-bold tracking-wider">
-            FRANCE<span className="text-red-600">.</span>
-          </h1>
+          <a href="#home" className="text-xl font-black tracking-tight">
+            F<span className="text-red-500">.</span>
+          </a>
 
-          <div className="hidden gap-8 text-sm font-medium text-gray-300 md:flex">
+          <div className="hidden items-center gap-8 text-sm font-medium md:flex">
             <a href="#home" className="transition hover:text-red-500">Home</a>
             <a href="#about" className="transition hover:text-red-500">About</a>
             <a href="#education" className="transition hover:text-red-500">Education</a>
@@ -19,348 +40,452 @@ export default function Home() {
 
           <a
             href="#contact"
-            className="rounded-full border border-red-600 px-5 py-2 text-sm transition hover:bg-red-600"
+            className="inline-flex items-center justify-center rounded-full bg-[#111111] px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-red-500"
           >
-            Contact Me
+            Let's Talk <ArrowRight className="ml-2 h-4 w-4" />
           </a>
+
         </div>
       </nav>
 
-      {/* HOME SECTION */}
+      {/* HERO SECTION */}
       <section
         id="home"
-        className="flex min-h-screen items-center justify-center px-6 pt-24"
+        className="relative flex min-h-screen items-center overflow-hidden px-6 pb-20 pt-28"
       >
-        <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
 
-          <div>
-            <p className="mb-4 font-semibold uppercase tracking-[0.4em] text-red-500">
-              Welcome to My Portfolio
-            </p>
+        <div className="pointer-events-none absolute -right-32 top-32 h-96 w-96 rounded-full bg-red-600/15 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-red-900/20 blur-3xl" />
 
-            <h1 className="text-5xl font-extrabold leading-tight md:text-7xl">
-              Hi, I'm <span className="text-red-600">France!</span>
-            </h1>
+        <div className="relative mx-auto grid w-full items-center gap-16 lg:grid-cols-2">
 
-            <h2 className="mt-4 text-2xl font-semibold text-gray-300 md:text-3xl">
-              BSIT Student & Future IT Professional
-            </h2>
+          {/* INTRODUCTION */}
+          <div className="space-y-7">
 
-            <p className="mt-6 max-w-xl leading-8 text-gray-400">
+            <Badge className="rounded-full border border-red-500/30 bg-red-500/10 px-4 py-2 text-red-400 hover:bg-red-500/10">
+              <Sparkles className="mr-2 h-3 w-3" />
+              Welcome to my personal website
+            </Badge>
+
+            <div>
+              <p className="mb-3 text-lg font-medium text-gray-400">
+                Hello there! I'm
+              </p>
+
+              <h1 className="text-6xl font-black leading-[1.05] tracking-tight sm:text-7xl lg:text-8xl">
+                France
+                <br />
+                <span className="text-red-500">Queenie.</span>
+              </h1>
+            </div>
+
+            <p className="max-w-lg text-lg leading-8 text-gray-300">
               I am a second-year BSIT student at Naga College Foundation.
               I love computers and learning how to build software.
               Right now, I am studying hard, writing code, and learning
-              new things every day. Welcome to my website!
-              🐯
+              new things every day.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4">
+
               <a
                 href="#about"
-                className="rounded-md bg-red-600 px-7 py-3 font-semibold transition hover:bg-red-700"
+                className="inline-flex h-10 items-center justify-center rounded-full bg-red-500 px-7 text-sm font-medium text-white transition-colors hover:bg-red-700"
               >
-                Explore More
+                Discover More <ArrowRight className="ml-2 h-4 w-4" />
               </a>
 
               <a
                 href="#contact"
-                className="rounded-md border border-gray-600 px-7 py-3 font-semibold transition hover:border-red-500 hover:text-red-500"
+                className="inline-flex h-10 items-center justify-center rounded-full border border-white/20 bg-transparent px-7 text-sm font-medium text-white transition-colors hover:bg-white/10"
               >
-                Get in Touch
+                Contact Me
               </a>
+
             </div>
+
+            <div className="flex items-center gap-3 pt-4 text-sm text-gray-400">
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-red-500/15 text-xl">
+                🐯
+              </span>
+
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-red-500/15">
+                <Laptop className="h-5 w-5 text-red-400" />
+              </span>
+
+              <span>Learning today, building tomorrow.</span>
+            </div>
+
           </div>
 
-          {/* DECORATIVE PROFILE AREA */}
-          <div className="flex justify-center">
-            <div className="relative flex h-72 w-72 items-center justify-center rounded-full border-2 border-red-600 bg-gradient-to-br from-red-950 via-[#160707] to-black shadow-[0_0_60px_rgba(220,38,38,0.25)] md:h-96 md:w-96">
+          {/* HERO VISUAL */}
+          <div className="relative mx-auto w-full max-w-md">
 
-              <div className="absolute inset-5 rounded-full border border-red-500/30"></div>
+            <div className="absolute -inset-5 rotate-6 rounded-[3rem] bg-red-600/20" />
 
-              <div className="text-center">
-                <p className="text-8xl">🐯</p>
-                <h2 className="mt-4 text-3xl font-black tracking-widest">
-                  FRANCE
-                </h2>
-                <p className="mt-2 text-sm tracking-[0.3em] text-red-500">
-                  FUTURE IT PROFESSIONAL
-                </p>
-              </div>
+            <Card className="relative overflow-hidden rounded-[2.5rem] border-none bg-[#111111] text-white shadow-2xl">
 
-              <div className="absolute -right-3 top-10 rounded-lg border border-red-600 bg-black px-4 py-2 text-sm text-red-500">
-                💻 Coding
-              </div>
+              <CardContent className="flex min-h-[430px] flex-col justify-between p-8 sm:p-10">
 
-              <div className="absolute -bottom-3 left-0 rounded-lg border border-red-600 bg-black px-4 py-2 text-sm text-red-500">
-                ✨ Learning
-              </div>
+                <div className="flex items-center justify-between">
+                  <Badge className="bg-red-500 text-white hover:bg-red-500">
+                    BSIT STUDENT
+                  </Badge>
 
+                  <Sparkles className="h-6 w-6 text-red-400" />
+                </div>
+
+                <div className="py-12 text-center">
+
+                  <div className="mx-auto mb-7 flex h-40 w-40 items-center justify-center rounded-full border border-white/10 bg-red-500/10 text-8xl">
+                    🐯
+                  </div>
+
+                  <h2 className="text-3xl font-bold">
+                    Hello, World!
+                  </h2>
+
+                  <p className="mt-3 text-sm text-gray-400">
+                    Aspiring IT Professional
+                  </p>
+
+                </div>
+
+                <Separator className="bg-white/10" />
+
+                <div className="flex items-center justify-between pt-5 text-sm text-gray-400">
+                  <span>Curious Mind</span>
+
+                  <span className="flex items-center gap-2">
+                    <span className="h-2 w-2 rounded-full bg-red-500" />
+                    Always Learning
+                  </span>
+                </div>
+
+              </CardContent>
+
+            </Card>
+
+            <div className="absolute -bottom-6 -left-8 rounded-2xl border border-red-500/20 bg-[#111111] p-4 text-white shadow-xl">
+              <Code2 className="h-7 w-7 text-red-500" />
             </div>
+
+            <div className="absolute -right-5 -top-5 rounded-2xl border border-white/10 bg-[#111111] p-4 text-white shadow-xl">
+              <span className="text-3xl">💻</span>
+            </div>
+
           </div>
 
         </div>
+
+        <a
+          href="#about"
+          className="absolute bottom-7 left-1/2 hidden -translate-x-1/2 items-center gap-2 text-xs text-gray-400 md:flex"
+        >
+          SCROLL TO EXPLORE
+          <ArrowDown className="h-4 w-4" />
+        </a>
+
       </section>
 
       {/* ABOUT SECTION */}
-      <section id="about" className="bg-[#101010] px-6 py-24">
+      <section id="about" className="w-full bg-[#111111] px-6 py-28">
 
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto w-full">
 
-          <div className="mb-14 text-center">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.4em] text-red-500">
-              Get to Know Me
-            </p>
+          <Badge className="mb-5 border border-red-500/30 bg-red-500/10 px-4 py-2 text-red-400 hover:bg-red-500/10">
+            <User className="mr-2 h-3 w-3" />
+            GET TO KNOW ME
+          </Badge>
 
-            <h2 className="text-4xl font-extrabold md:text-5xl">
-              About <span className="text-red-600">Me</span>
-            </h2>
+          <h2 className="text-4xl font-black tracking-tight sm:text-6xl">
+            A Little About <span className="text-red-500">Me.</span>
+          </h2>
 
-            <div className="mx-auto mt-5 h-1 w-20 rounded-full bg-red-600"></div>
-          </div>
+          <p className="mt-5 max-w-3xl leading-8 text-gray-400">
+            Hi! My name is France Queenie Boncodin. I am a second-year
+            BSIT student at Naga College Foundation. I enjoy exploring
+            technology, discovering new ideas, and improving my
+            programming skills.
+          </p>
 
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
 
-            {/* INTRODUCTION */}
-            <div className="rounded-xl border border-gray-800 bg-[#171717] p-8 transition hover:border-red-600">
+            <Card className="rounded-3xl border-white/10 bg-[#191919] text-white transition hover:border-red-500/50">
+              <CardContent className="p-8 sm:p-10">
 
-              <h3 className="mb-5 text-2xl font-bold">
-                <span className="text-red-600">01.</span> Who Am I?
-              </h3>
+                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-red-500/10">
+                  <Laptop className="h-7 w-7 text-red-500" />
+                </div>
 
-              <p className="leading-8 text-gray-400">
-                Hi! My name is France Queenie Boncodin.
-                I am a second-year BSIT student at Naga College Foundation.
-                I am passionate about computers, technology, and learning
-                how to develop software.
-              </p>
+                <h3 className="mb-4 text-2xl font-bold">
+                  Why I Chose IT
+                </h3>
 
-            </div>
-
-            {/* WHY IT */}
-            <div className="rounded-xl border border-gray-800 bg-[#171717] p-8 transition hover:border-red-600">
-
-              <h3 className="mb-5 text-2xl font-bold">
-                <span className="text-red-600">02.</span> Why I Chose IT
-              </h3>
-
-              <p className="leading-8 text-gray-400">
-                I chose IT because I am curious about how technology works.
-                That is why I decided to study Information Technology.
-                I enjoy the challenge of learning how to code and build
-                projects. NCF is helping me develop the skills I need
-                for the future.
-              </p>
-
-            </div>
-
-          </div>
-
-          {/* WHAT I DO */}
-          <div className="mt-8">
-
-            <h3 className="mb-8 text-center text-3xl font-bold">
-              What I <span className="text-red-600">Do</span>
-            </h3>
-
-            <div className="grid gap-6 md:grid-cols-3">
-
-              <div className="rounded-xl border border-gray-800 bg-[#171717] p-8 text-center transition hover:-translate-y-2 hover:border-red-600">
-                <div className="mb-4 text-5xl">📚</div>
-                <h4 className="mb-3 text-xl font-bold">Studying</h4>
-                <p className="leading-7 text-gray-400">
-                  Learning programming languages, databases,
-                  and computer systems.
+                <p className="leading-8 text-gray-400">
+                  I chose Information Technology because I am curious
+                  about how technology works. I enjoy the challenge
+                  of learning how to code and build projects.
+                  NCF is helping me develop the skills I need
+                  for my future career.
                 </p>
-              </div>
 
-              <div className="rounded-xl border border-gray-800 bg-[#171717] p-8 text-center transition hover:-translate-y-2 hover:border-red-600">
-                <div className="mb-4 text-5xl">💻</div>
-                <h4 className="mb-3 text-xl font-bold">Creating</h4>
-                <p className="leading-7 text-gray-400">
-                  Practicing my coding skills by making
-                  simple applications and websites.
-                </p>
-              </div>
+              </CardContent>
+            </Card>
 
-              <div className="rounded-xl border border-gray-800 bg-[#171717] p-8 text-center transition hover:-translate-y-2 hover:border-red-600">
-                <div className="mb-4 text-5xl">🚀</div>
-                <h4 className="mb-3 text-xl font-bold">Growing</h4>
-                <p className="leading-7 text-gray-400">
-                  Trying my best to become a good student
-                  and a future IT professional.
-                </p>
-              </div>
+            <Card className="rounded-3xl border-white/10 bg-[#191919] text-white transition hover:border-red-500/50">
+              <CardContent className="p-8 sm:p-10">
 
-            </div>
+                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-red-500/10">
+                  <Terminal className="h-7 w-7 text-red-500" />
+                </div>
+
+                <h3 className="mb-6 text-2xl font-bold">
+                  What I Do
+                </h3>
+
+                <div className="space-y-5">
+
+                  <div className="flex gap-4">
+                    <BookOpen className="mt-1 h-5 w-5 shrink-0 text-red-500" />
+                    <div>
+                      <h4 className="font-semibold">Studying</h4>
+                      <p className="text-sm leading-6 text-gray-400">
+                        Learning programming languages, databases,
+                        and computer systems.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <Code2 className="mt-1 h-5 w-5 shrink-0 text-red-500" />
+                    <div>
+                      <h4 className="font-semibold">Creating</h4>
+                      <p className="text-sm leading-6 text-gray-400">
+                        Practicing my coding skills by making
+                        simple applications and websites.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <Heart className="mt-1 h-5 w-5 shrink-0 text-red-500" />
+                    <div>
+                      <h4 className="font-semibold">Growing</h4>
+                      <p className="text-sm leading-6 text-gray-400">
+                        Trying my best to become a good student
+                        and a future IT professional.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
+              </CardContent>
+            </Card>
+
           </div>
 
         </div>
+
       </section>
 
       {/* EDUCATION SECTION */}
-      <section id="education" className="px-6 py-24">
+      <section id="education" className="w-full bg-[#080808] px-6 py-28">
 
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto w-full">
 
-          <div className="mb-14 text-center">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.4em] text-red-500">
-              My Academic Background
-            </p>
+          <Badge className="mb-5 border border-red-500/30 bg-red-500/10 px-4 py-2 text-red-400 hover:bg-red-500/10">
+            <GraduationCap className="mr-2 h-3 w-3" />
+            MY ACADEMIC JOURNEY
+          </Badge>
 
-            <h2 className="text-4xl font-extrabold md:text-5xl">
-              My <span className="text-red-600">Education</span>
-            </h2>
+          <h2 className="mb-12 text-4xl font-black tracking-tight sm:text-6xl">
+            My <span className="text-red-500">Education.</span>
+          </h2>
 
-            <div className="mx-auto mt-5 h-1 w-20 rounded-full bg-red-600"></div>
-          </div>
+          <Card className="overflow-hidden rounded-3xl border-white/10 bg-[#191919] text-white shadow-xl">
 
-          <div className="rounded-xl border border-red-900/50 bg-[#111111] p-8 shadow-[0_0_30px_rgba(220,38,38,0.08)] md:p-12">
-
-            <div className="mb-8 flex items-center gap-5">
-              <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-red-600 text-3xl">
-                🎓
-              </div>
+            <CardContent className="grid gap-10 p-8 sm:p-12 md:grid-cols-[1fr_auto] md:items-center">
 
               <div>
-                <p className="text-sm font-semibold uppercase tracking-widest text-red-500">
-                  College
-                </p>
 
-                <h3 className="text-xl font-bold md:text-2xl">
+                <Badge className="mb-6 bg-red-500 text-white hover:bg-red-500">
+                  CURRENTLY ENROLLED
+                </Badge>
+
+                <h3 className="text-3xl font-bold sm:text-4xl">
                   Naga College Foundation
                 </h3>
+
+                <p className="mt-3 text-lg text-gray-400">
+                  Bachelor of Science in Information Technology
+                </p>
+
+                <Separator className="my-8 bg-white/10" />
+
+                <div className="grid gap-6 sm:grid-cols-2">
+
+                  <div>
+                    <p className="mb-2 text-sm text-gray-500">COURSE</p>
+                    <p className="font-semibold">BS Information Technology</p>
+                  </div>
+
+                  <div>
+                    <p className="mb-2 text-sm text-gray-500">YEAR LEVEL</p>
+                    <p className="font-semibold">Second Year</p>
+                  </div>
+
+                  <div>
+                    <p className="mb-2 text-sm text-gray-500">DEPARTMENT</p>
+                    <p className="font-semibold">College of Computer Studies</p>
+                  </div>
+
+                  <div>
+                    <p className="mb-2 text-sm text-gray-500">STATUS</p>
+                    <p className="font-semibold">Currently Enrolled</p>
+                  </div>
+
+                </div>
+
               </div>
-            </div>
 
-            <div className="space-y-5">
-
-              <div className="flex flex-col justify-between gap-2 border-b border-gray-800 pb-4 sm:flex-row">
-                <span className="text-gray-500">School</span>
-                <span className="font-semibold">Naga College Foundation</span>
+              <div className="hidden h-48 w-48 items-center justify-center rounded-full border border-red-500/20 bg-red-500/10 md:flex">
+                <School className="h-24 w-24 text-red-500" />
               </div>
 
-              <div className="flex flex-col justify-between gap-2 border-b border-gray-800 pb-4 sm:flex-row">
-                <span className="text-gray-500">Course</span>
-                <span className="font-semibold">
-                  Bachelor of Science in Information Technology (BSIT)
-                </span>
-              </div>
+            </CardContent>
 
-              <div className="flex flex-col justify-between gap-2 border-b border-gray-800 pb-4 sm:flex-row">
-                <span className="text-gray-500">Year Level</span>
-                <span className="font-semibold">Second Year Student</span>
-              </div>
-
-              <div className="flex flex-col justify-between gap-2 border-b border-gray-800 pb-4 sm:flex-row">
-                <span className="text-gray-500">Department</span>
-                <span className="font-semibold">College of Computer Studies</span>
-              </div>
-
-              <div className="flex flex-col justify-between gap-2 sm:flex-row">
-                <span className="text-gray-500">Status</span>
-                <span className="font-semibold text-green-500">
-                  ● Currently Enrolled
-                </span>
-              </div>
-
-            </div>
-          </div>
+          </Card>
 
         </div>
+
       </section>
 
       {/* CONTACT SECTION */}
-      <section id="contact" className="bg-[#101010] px-6 py-24">
+      <section id="contact" className="w-full bg-[#111111] px-6 py-28">
 
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto grid w-full gap-16 md:grid-cols-2">
 
-          <div className="mb-14 text-center">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.4em] text-red-500">
-              Let's Connect
-            </p>
+          <div>
 
-            <h2 className="text-4xl font-extrabold md:text-5xl">
-              Contact <span className="text-red-600">Me</span>
+            <Badge className="mb-5 border border-red-500/30 bg-red-500/10 px-4 py-2 text-red-400 hover:bg-red-500/10">
+              <Mail className="mr-2 h-3 w-3" />
+              GET IN TOUCH
+            </Badge>
+
+            <h2 className="text-5xl font-black leading-tight sm:text-6xl">
+              Let's Connect<span className="text-red-500">!</span>
             </h2>
 
-            <p className="mx-auto mt-5 max-w-xl leading-7 text-gray-400">
-              Feel free to reach out to me through my personal
-              or school contact information.
+            <p className="mt-6 max-w-md leading-8 text-gray-400">
+              Thank you for visiting my personal website!
+              Feel free to contact me through my email or phone number.
+              I'd love to connect with you.
             </p>
 
-            <div className="mx-auto mt-5 h-1 w-20 rounded-full bg-red-600"></div>
+            <div className="mt-10 flex items-center gap-3 text-gray-400">
+              <MapPin className="h-5 w-5 text-red-500" />
+              Naga City, Philippines
+            </div>
+
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="space-y-5">
 
-            {/* PERSONAL EMAIL */}
-            <a
-              href="mailto:francquinniboncodin@gmail.com"
-              className="rounded-xl border border-gray-800 bg-[#171717] p-8 text-center transition hover:-translate-y-2 hover:border-red-600"
-            >
-              <div className="mb-4 text-4xl">📧</div>
-              <h3 className="mb-3 text-xl font-bold">Personal Email</h3>
-              <p className="break-all text-sm text-gray-400">
-                francquinniboncodin@gmail.com
-              </p>
-            </a>
+            <Card className="rounded-2xl border-white/10 bg-[#191919] text-white transition hover:border-red-500/50">
+              <CardContent className="flex items-center gap-5 p-6">
 
-            {/* SCHOOL EMAIL */}
-            <a
-              href="mailto:fqboncodin@gbox.ncf.edu.ph"
-              className="rounded-xl border border-gray-800 bg-[#171717] p-8 text-center transition hover:-translate-y-2 hover:border-red-600"
-            >
-              <div className="mb-4 text-4xl">🎓</div>
-              <h3 className="mb-3 text-xl font-bold">School Email</h3>
-              <p className="break-all text-sm text-gray-400">
-                fqboncodin@gbox.ncf.edu.ph
-              </p>
-            </a>
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-red-500/10">
+                  <Mail className="h-6 w-6 text-red-500" />
+                </div>
 
-            {/* PHONE */}
-            <a
-              href="tel:09632323389"
-              className="rounded-xl border border-gray-800 bg-[#171717] p-8 text-center transition hover:-translate-y-2 hover:border-red-600"
-            >
-              <div className="mb-4 text-4xl">📱</div>
-              <h3 className="mb-3 text-xl font-bold">Phone Number</h3>
-              <p className="text-sm text-gray-400">
-                09632323389
-              </p>
-            </a>
+                <div className="min-w-0">
+                  <p className="mb-1 text-sm text-gray-500">Personal Email</p>
+                  <a
+                    href="mailto:francquinniboncodin@gmail.com"
+                    className="break-all font-semibold transition hover:text-red-400"
+                  >
+                    francquinniboncodin@gmail.com
+                  </a>
+                </div>
+
+              </CardContent>
+            </Card>
+
+            <Card className="rounded-2xl border-white/10 bg-[#191919] text-white transition hover:border-red-500/50">
+              <CardContent className="flex items-center gap-5 p-6">
+
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-red-500/10">
+                  <GraduationCap className="h-6 w-6 text-red-500" />
+                </div>
+
+                <div className="min-w-0">
+                  <p className="mb-1 text-sm text-gray-500">School Email (GBox)</p>
+                  <a
+                    href="mailto:fqboncodin@gbox.ncf.edu.ph"
+                    className="break-all font-semibold transition hover:text-red-400"
+                  >
+                    fqboncodin@gbox.ncf.edu.ph
+                  </a>
+                </div>
+
+              </CardContent>
+            </Card>
+
+            <Card className="rounded-2xl border-white/10 bg-[#191919] text-white transition hover:border-red-500/50">
+              <CardContent className="flex items-center gap-5 p-6">
+
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-red-500/10">
+                  <Phone className="h-6 w-6 text-red-500" />
+                </div>
+
+                <div>
+                  <p className="mb-1 text-sm text-gray-500">Phone Number</p>
+                  <a
+                    href="tel:09632323389"
+                    className="font-semibold transition hover:text-red-400"
+                  >
+                    09632323389
+                  </a>
+                </div>
+
+              </CardContent>
+            </Card>
 
           </div>
 
         </div>
+
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-red-900/30 bg-black px-6 py-8">
+      <footer className="w-full border-t border-white/10 bg-[#080808] px-6 py-8">
 
-        <div className="mx-auto max-w-6xl text-center">
+        <div className="flex flex-col items-center justify-between gap-5 sm:flex-row">
 
-          <h2 className="text-2xl font-black tracking-widest">
-            FRANCE<span className="text-red-600">.</span>
-          </h2>
+          <a href="#home" className="text-2xl font-black">
+            F<span className="text-red-500">.</span>
+          </a>
 
-          <p className="mt-3 text-sm text-gray-500">
-            A BSIT Student | Dream Big. Learn More. Build the Future.
+          <p className="text-center text-sm text-gray-500">
+            © {new Date().getFullYear()} France Queenie Boncodin.
+            Made with passion and curiosity.
           </p>
 
-          <div className="my-6 h-px bg-gray-900"></div>
-
-          <p className="text-sm text-gray-600">
-  © 2026 France Queenie Boncodin. All Rights Reserved.
-</p>
-
-          <p className="mt-2 text-xs text-red-700">
-            Designed with ❤️ and passion for technology.
-          </p>
+          <a
+            href="#home"
+            className="flex items-center gap-2 text-sm text-gray-400 transition hover:text-red-400"
+          >
+            Back to top
+            <ArrowRight className="-rotate-90 h-4 w-4" />
+          </a>
 
         </div>
 
       </footer>
 
     </main>
-  );
+  )
 }
+
